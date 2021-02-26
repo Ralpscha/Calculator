@@ -22,7 +22,7 @@ app.post('/', function (req, res) {
 app.post('/bmicalculator', function (req, res){
   let length = parseFloat(req.body.length);
   let weight = parseFloat(req.body.weight);
-  let bmi = weight / (length * length);
+  let bmi = (weight / (length * length)).toFixed(2);
   res.send('Your bmi is ' + bmi);
 });
 
